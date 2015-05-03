@@ -1,0 +1,47 @@
+#Spring boot security user name and password
+security: 
+  user: 
+    name: eureka
+    password: khandelwal
+  
+#Role of user
+management: 
+  security: 
+    role: SUPERUSER
+    
+#Application name (Eureka server)
+spring:
+  application:
+   name: EurekaServer
+  
+#Eureka server Port
+server:
+  port: 8761
+
+#Configuration of eureka client running in eureka server 
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  server:
+    waitTimeInMsWhenSyncEmpty: 0
+    
+logging:
+  file:  logs/eureka-server-logs.log
+    
+---
+spring:
+  profiles:  dev
+ 
+---
+Spring:
+  profiles:  prod
+  
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.server.hostname}:8761/eureka/
