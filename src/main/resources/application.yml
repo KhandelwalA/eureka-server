@@ -12,7 +12,7 @@ management:
 #Application name (Eureka server)
 spring:
   application:
-   name: EurekaServer
+    name: EurekaServer
   
 #Eureka server Port
 server:
