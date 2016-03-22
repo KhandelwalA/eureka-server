@@ -1,5 +1,7 @@
 #eureka-server
 
-This project is to use netflix eureka as a service registry server.
+This restful microservice act as server to register other microservices and support intermicroservice communication.
 
-This code base is written in spring boot along with netfix oss.
+This microservice is using Netflix oss aka Eureka server in principle 
+
+This code base is written in spring boot on restful web service concept
